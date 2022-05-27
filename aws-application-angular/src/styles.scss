@@ -1,0 +1,36 @@
+$primary-color: #17a2b8;
+$primary-darkened-color: #14707f;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.background-primary-color {
+  background-color: $primary-color;
+}
+
+.primary-button {
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  height: 36px;
+  border: solid 3px $primary-color;
+  background-color: $primary-color;
+
+  &:active {
+    border: solid 3px $primary-darkened-color;
+  }
+}
+
+.primary-input {
+  height: 36px;
+  border-radius: 5px;
+  border: solid 1px $primary-color;
+  outline: none;
+  background-color: white;
+}

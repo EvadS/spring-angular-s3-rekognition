@@ -1,0 +1,22 @@
+<div class="image-container">
+  <div class="image-container__options">
+    <div class="image-container__options__choose">
+      <h4 class="image-container__options__choose-title">Image : </h4>
+      <button type="button" class="image-container__options__choose-button primary-input" (click)="fileInput.click()">
+        <span class="image-container__options__choose-text">{{currentFile?.name || 'Choose file'}}</span>
+        <input #fileInput type="file" [accept]="acceptFileTypes" (change)="onFileInputChanged($event)" style="display:none;" />
+      </button>
+      <button class="primary-button" (click)="uploadFile()">Upload</button>
+    </div>
+    <div class="image-container__options__search">
+      <h4 class="image-container__options__search-text">Please find me images that contain the following items: </h4>
+      <input type="text" class="image-container__options__search-input primary-input" (change)="onSearchTextChanged($event)">
+      <button class="primary-button" (click)="searchImages()">Search</button>
+    </div>
+  </div>
+  <div class="image-container__gallery">
+    <div class="image-container__gallery-card" *ngFor="let file of images">
+      <img class="image-container__gallery-image" [src]="file.previewImagePath">
+    </div>
+  </div>
+</div>

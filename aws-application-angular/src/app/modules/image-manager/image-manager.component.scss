@@ -1,0 +1,74 @@
+@import "src/styles";
+
+
+.image-container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  &__options {
+    padding: 20px;
+
+    &__choose {
+      margin-top: 40px;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+
+      &-title {
+        margin-right: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      &-text {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: start;
+        color: $primary-color;
+      }
+
+      &-button {
+        width: 200px;
+        margin-right: 10px;
+      }
+    }
+
+    &__search {
+      margin-top: 40px;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      &-text {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10px;
+      }
+
+      &-input {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__gallery {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    &-card {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+    &-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
