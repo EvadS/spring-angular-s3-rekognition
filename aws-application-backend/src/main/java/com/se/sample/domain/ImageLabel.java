@@ -10,6 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
+@Table(indexes = @Index(columnList = "name"))
 public class ImageLabel {
 
     @Id
